@@ -1,7 +1,6 @@
 
 import streamlit as st
 import tensorflow as tf
-import streamlit as st
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
@@ -15,11 +14,11 @@ with st.spinner('Model is being loaded..'):
     model = load_model()
 
 st.write("""
-         # Flower Classification
+         # Pneumonia Identification System
          """
          )
 
-file = st.file_uploader("Please upload an brain scan file", type=["jpg","jpeg", "png"])
+file = st.file_uploader("Please upload a chest scan file", type=["jpg","jpeg", "png"])
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
@@ -40,7 +39,7 @@ else:
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
     score = tf.nn.softmax(predictions[0])
-    st.write(prediction)
+    st.write(predictions)
     st.write(score)
     print(
         "This image most likely belongs to {} with a {:.2f} percent confidence."
