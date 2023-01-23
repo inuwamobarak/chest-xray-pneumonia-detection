@@ -1,6 +1,7 @@
 streamlit
 tensorflow
-update
-libgl1
+ffmpeg
+libsm6
+libxext6 
 opencv-python-headless
 numpy
