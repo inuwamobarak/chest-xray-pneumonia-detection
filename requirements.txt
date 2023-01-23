@@ -1,3 +1,4 @@
 streamlit
 tensorflow
-python3-opencv
+numpy
+opencv-python
